@@ -1,6 +1,3 @@
-from functools import total_ordering
-
-
 class Stack:
     def __init__(self):
         self.stk = []
@@ -14,7 +11,7 @@ class Stack:
         return self.stk[len(self.stk) - 1]
     def isEmpty(self):
         return len(self.stk) == 0
-        
+
 class Queue:
     pass
 
