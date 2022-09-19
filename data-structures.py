@@ -54,14 +54,6 @@ class myNode:
         self.data = data
         self.next = None
 
-if __name__ == '__main__':
-    list = myLinkedList()
-    for x in range(1, 101):
-        temp_node = myNode(x)
-        list.add(temp_node)
-        print(f'Added : {x}')
-    print(list.format_list())
-
 
 
 
