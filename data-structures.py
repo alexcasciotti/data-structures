@@ -1,4 +1,4 @@
-class Stack:
+class myStack:
     def __init__(self):
         self.stk = []
     def push(self, value):
@@ -12,7 +12,7 @@ class Stack:
     def isEmpty(self):
         return len(self.stk) == 0
 
-class Queue:
+class myQueue:
     def __init__(self):
         self.q = []
     def enqueue(self, value):
@@ -47,7 +47,7 @@ class myLinkedList:
                 str += f'{current.data}\n'
                 current = current.next
             return str
-class Node:
+class myNode:
     def __init__(self, data=None):
         if(data is None):
             self.data = None
@@ -57,7 +57,7 @@ class Node:
 if __name__ == '__main__':
     list = myLinkedList()
     for x in range(1, 101):
-        temp_node = Node(x)
+        temp_node = myNode(x)
         list.add(temp_node)
         print(f'Added : {x}')
     print(list.format_list())
