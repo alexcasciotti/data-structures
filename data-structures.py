@@ -26,6 +26,50 @@ class Queue:
     def isEmpty(self):
         return len(self.q) == 0
 
+class myLinkedList:
+    def __init__(self):
+        self.head = None
+    def add(self, node):
+        if(self.head is None):
+            self.head = node
+        else:
+            current = self.head
+            while(current.next is not None):
+                current = current.next
+            current.next = node
+    def format_list(self):
+        if(self.head == None):
+            return 'Empty list...'
+        else:
+            current = self.head
+            str = ''
+            while(current is not None):
+                str += f'{current.data}\n'
+                current = current.next
+            return str
+class Node:
+    def __init__(self, data=None):
+        if(data is None):
+            self.data = None
+        self.data = data
+        self.next = None
+
+if __name__ == '__main__':
+    list = myLinkedList()
+    for x in range(1, 101):
+        temp_node = Node(x)
+        list.add(temp_node)
+        print(f'Added : {x}')
+    print(list.format_list())
+
+
+
+
+
+
+
+
+
 
 
 
