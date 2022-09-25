@@ -48,9 +48,8 @@ class myLinkedList:
                 current = current.next
         if(current.next.data != target):
             return 1
-        else:
-            current.next = current.next.next
-            return 0
+        current.next = current.next.next
+        return 0
     def format_list(self):
         if(self.head == None):
             return 'Empty list...'
