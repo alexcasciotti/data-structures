@@ -37,6 +37,20 @@ class myLinkedList:
             while(current.next is not None):
                 current = current.next
             current.next = node
+    def remove(self, target):
+        if(self.head == None):
+            return 1
+        current = self.head
+        while(current.next.next != None):
+            if(current.next.data == target):
+                current.next = current.next.next
+            else:
+                current = current.next
+        if(current.next.data != target):
+            return 1
+        else:
+            current.next = current.next.next
+            return 0
     def format_list(self):
         if(self.head == None):
             return 'Empty list...'
@@ -53,7 +67,15 @@ class myNode:
             self.data = None
         self.data = data
         self.next = None
-
-
+one = myNode(1)
+two = myNode(2)
+three = myNode(3)
+myList = myLinkedList()
+myList.add(one)
+myList.add(two)
+myList.add(three)
+print(myList.format_list())
+myList.remove(3)
+print(myList.format_list())
 
 
